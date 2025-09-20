@@ -24,7 +24,7 @@ const Resume = () => {
   }, []);
   return (
     <>
-      {process.env.NODE_ENV === "development" && (
+      {/* {process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-6 right-6">
           <Button onClick={() => router.push("/edit")} type={"primary"}>
             Edit Resume
@@ -125,7 +125,26 @@ const Resume = () => {
               </div>
             </div>
           </div>
-        )}
+        )} */}
+      {/* </div> */}
+      <div className="mt-10 w-full flex justify-center">
+        <embed
+          src="/resumeKrush.pdf"
+          type="application/pdf"
+          width="100%"
+          height="800px"
+        />
+      </div>
+      <div className="mt-10 flex justify-center">
+        <a
+          href="/resumeKrush.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 
+               shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
+        >
+          Download Resume
+        </a>
       </div>
     </>
   );
